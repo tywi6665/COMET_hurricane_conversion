@@ -8,8 +8,12 @@ const Interaction_wrapper = ({ children, img_src }) => {
         <>
             <img className="interaction_img" src="./graphics/sample.jpg" title="Aim-a-cane" />
             <div className="draggables_wrapper">
-                <Low_pressure />
-                <High_pressure />
+                <Low_pressure
+                    _id="low"
+                />
+                <High_pressure
+                    _id="high"
+                />
                 <Button
                     text='Start'
                     button_class=""
