@@ -8,6 +8,18 @@
         padding: 15px;
         margin: 0 auto;
         border: solid 1px black;
+
+        .low {
+            font-weight: bold;
+            color: red;
+            font-size: 2em;
+        }
+
+        .high {
+            font-weight: bold;
+            color: blue;
+            font-size: 2em;
+        }
     }
 
 }
