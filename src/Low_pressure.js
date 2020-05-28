@@ -2,12 +2,12 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 import { ItemTypes } from './utils/items';
 
-const low_pressure = (props) => {
+const Low_pressure = ({ _id }) => {
 
     const [{ isDragging }, drag] = useDrag({
         item: {
             type: ItemTypes.LOW,
-            id: props._id
+            id: _id
         },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
@@ -22,4 +22,4 @@ const low_pressure = (props) => {
     );
 }
 
-export default low_pressure;
+export default Low_pressure;
