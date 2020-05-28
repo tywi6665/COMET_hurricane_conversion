@@ -1,18 +1,25 @@
 import React from 'react';
-import Low_pressure from './Low_pressure';
-import High_pressure from './High_pressure';
+import ImageTarget from './ImageTarget';
+import Draggable from './Draggable';
 import Button from './Button'
 
 const Interaction_wrapper = ({ children, img_src }) => {
+
+    const isPlaced = _id => {
+
+    }
+
     return (
         <>
-            <img className="interaction_img" src="./graphics/sample.jpg" title="Aim-a-cane" />
+            <ImageTarget />
             <div className="draggables_wrapper">
-                <Low_pressure
+                <Draggable
                     _id="low"
+                    text="L"
                 />
-                <High_pressure
+                <Draggable
                     _id="high"
+                    text="H"
                 />
                 <Button
                     text='Start'

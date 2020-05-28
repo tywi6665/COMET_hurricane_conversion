@@ -2,11 +2,11 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 import { ItemTypes } from './utils/items';
 
-const Low_pressure = ({ _id }) => {
+const Draggable = ({ _id, text }) => {
 
     const [{ isDragging }, drag] = useDrag({
         item: {
-            type: ItemTypes.LOW,
+            type: (_id === "low") ? ItemTypes.LOW : ItemTypes.HIGH,
             id: _id
         },
         collect: (monitor) => ({
@@ -17,9 +17,9 @@ const Low_pressure = ({ _id }) => {
     return (
         <span
             ref={drag}
-            className="low"
-        >L</span>
+            className={_id}
+        >{text}</span>
     );
 }
 
-export default Low_pressure;
+export default Draggable;
