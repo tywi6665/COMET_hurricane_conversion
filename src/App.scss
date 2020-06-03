@@ -25,15 +25,6 @@
             height: 45px;
             width: 45px;
             animation: rotation 5s infinite linear;
-
-            @keyframes rotation {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
-            }
         }
 
         .image_wrapper {
@@ -44,6 +35,7 @@
                 width: 50px;
                 border: 2px solid black;
                 position: absolute;
+                text-align: center;
                 
 
                 &-high_1 {
@@ -60,9 +52,36 @@
                     right: 150px;
                     bottom: 300px; 
                 }
+
+                .drag_low {
+                    font-weight: bold;
+                    color: red;
+                    font-size: 2em;
+                }
+        
+                .drag_high {
+                    font-weight: bold;
+                    color: blue;
+                    font-size: 2em;
+                }
+        
+                .drag_hurricane {
+                    height: 45px;
+                    width: 45px;
+                    animation: rotation 5s infinite linear;
+                }
             }  
         }
         
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
 
 }

@@ -2,12 +2,15 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 import { ItemTypes } from '../../utils/items';
 
-const Draggable = ({ _id, text, name, src }) => {
+const Draggable = ({ _id, index, text, name, src, isDragged }) => {
 
     const [{ isDragging }, drag] = useDrag({
         item: {
             type: (name === "high" ? ItemTypes.HIGH : (name === "low" ? ItemTypes.LOW : ItemTypes.HURRICANE)),
-            id: _id
+            id: _id,
+            src: src ? src : null,
+            text: (name === "high" ? "H" : (name === "low" ? "L" : null)),
+            index: index
         },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
@@ -19,12 +22,14 @@ const Draggable = ({ _id, text, name, src }) => {
             {text ? (
                 <span
                     ref={drag}
+                    index={index}
                     className={_id}
-                    style={{ opacity: isDragging ? "0" : "1" }}
+                    style={{ opacity: isDragging ? "0" : "1", visibility: isDragged ? "hidden" : "visible" }}
                 >{text}</span>
             ) : (
                     <img src={src}
                         ref={drag}
+                        index={index}
                         className={_id}
                         style={{ opacity: isDragging ? "0" : "1" }}
                     />

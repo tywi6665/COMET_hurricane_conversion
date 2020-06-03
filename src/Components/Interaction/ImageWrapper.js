@@ -3,7 +3,7 @@ import React from 'react';
 // import { ItemTypes } from '../../utils/items';
 import Target from "./Target";
 
-const ImageWrapper = ({ children, img_src, _id }) => {
+const ImageWrapper = ({ dragItems, setDragItems, children, img_src, _id }) => {
 
     // const [{ isOver }, drop] = useDrop({
     //     accept: [ItemTypes.LOW, ItemTypes.HIGH],
@@ -26,14 +26,20 @@ const ImageWrapper = ({ children, img_src, _id }) => {
             <Target
                 _id="high_1"
                 name="high"
+                dragItems={dragItems}
+                setDragItems={setDragItems}
             />
             <Target
                 _id="low_1"
                 name="low"
+                dragItems={dragItems}
+                setDragItems={setDragItems}
             />
             <Target
                 _id="hurricane_1"
                 name="hurricane"
+                dragItems={dragItems}
+                setDragItems={setDragItems}
             />
         </div>
 
