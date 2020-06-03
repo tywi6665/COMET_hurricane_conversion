@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageTarget from './ImageTarget';
+import ImageWrapper from './ImageWrapper';
 import Draggable from './Draggable';
-import Button from './Button'
+import Button from '../Button'
 
 const Interaction_wrapper = ({ children, img_src }) => {
 
@@ -11,15 +11,22 @@ const Interaction_wrapper = ({ children, img_src }) => {
 
     return (
         <>
-            <ImageTarget />
+            <ImageWrapper />
             <div className="draggables_wrapper">
                 <Draggable
-                    _id="low"
+                    _id="drag_low"
+                    name="low"
                     text="L"
                 />
                 <Draggable
-                    _id="high"
+                    _id="drag_high"
+                    name="high"
                     text="H"
+                />
+                <Draggable
+                    _id="drag_hurricane"
+                    name="hurricane"
+                    src="/graphics/hurricane.jpg"
                 />
                 <Button
                     text='Start'

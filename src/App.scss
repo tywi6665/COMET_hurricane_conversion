@@ -9,17 +9,45 @@
         margin: 0 auto;
         border: solid 1px black;
 
-        .low {
+        .drag_low {
             font-weight: bold;
             color: red;
             font-size: 2em;
         }
 
-        .high {
+        .drag_high {
             font-weight: bold;
             color: blue;
             font-size: 2em;
         }
+
+        .image_wrapper {
+            position: relative;
+
+            .target {
+                height: 50px;
+                width: 50px;
+                border: 2px solid black;
+                position: absolute;
+                
+
+                &-high_1 {
+                    right: 225px;
+                    top: 200px; 
+                }
+
+                &-low_1 {
+                    left: 150px;
+                    top: 250px; 
+                }
+
+                &-hurricane_1 {
+                    right: 150px;
+                    bottom: 300px; 
+                }
+            }  
+        }
+        
     }
 
 }

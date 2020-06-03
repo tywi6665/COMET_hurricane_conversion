@@ -1,4 +1,5 @@
 export const ItemTypes = {
     LOW: 'low',
-    HIGH: 'high'
+    HIGH: 'high',
+    HURRICANE: 'hurricane'
 }
