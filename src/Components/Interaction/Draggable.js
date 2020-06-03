@@ -20,11 +20,14 @@ const Draggable = ({ _id, text, name, src }) => {
                 <span
                     ref={drag}
                     className={_id}
+                    style={{ opacity: isDragging ? "0" : "1" }}
                 >{text}</span>
             ) : (
                     <img src={src}
                         ref={drag}
-                        className={_id} />
+                        className={_id}
+                        style={{ opacity: isDragging ? "0" : "1" }}
+                    />
                 )}
         </>
 

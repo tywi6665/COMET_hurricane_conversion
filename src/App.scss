@@ -21,6 +21,21 @@
             font-size: 2em;
         }
 
+        .drag_hurricane {
+            height: 45px;
+            width: 45px;
+            animation: rotation 5s infinite linear;
+
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
         .image_wrapper {
             position: relative;
 
