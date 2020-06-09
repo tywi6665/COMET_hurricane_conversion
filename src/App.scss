@@ -1,13 +1,23 @@
+$modRed : #fe5152;
+$modBlue : #00bef8;
+
 .App {
 
     padding: 15px;
 
     .wrapper {
+        position: relative;
         width: fit-content;
         height: 100%;
         padding: 15px;
         margin: 0 auto;
-        border: solid 1px black;
+        border: solid 1px rgba(255,255,255,0.25);
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebf3f9+0,e1e8ef+100 */
+        background: #ebf3f9;
+        background: -moz-linear-gradient(left,  #ebf3f9 0%, #e1e8ef 100%) fixed;
+        background: -webkit-linear-gradient(left,  #ebf3f9 0%,#e1e8ef 100%) fixed;
+        background: linear-gradient(to right,  #ebf3f9 0%,#e1e8ef 100%) fixed;
+        box-shadow: 15px 15px 10px #d4e0ed;
 
         .drag_low {
             font-weight: bold;
@@ -73,6 +83,9 @@
             }  
         }
         
+        /*.interaction_img {
+            max-width: 640px;
+        }*/
     }
 
     @keyframes rotation {
@@ -85,3 +98,72 @@
     }
 
 }
+
+.tutorial-link {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding: 100px 10px;
+}
+
+.tutorial-modal {
+    /*display: none;*/
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 720px;
+    max-height: 500px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3e4247+0,2f3135+100 */
+    background: #3e4247;
+    background: -moz-linear-gradient(top,  #6078B0 0%, #5866A0 100%) fixed;
+    background: -webkit-linear-gradient(top,  #6078B0 0%,#5866A0 100%) fixed;
+    background: linear-gradient(to bottom,  #6078B0 0%,#5866A0 100%) fixed;
+    border-radius: 30px;
+    box-shadow: 5px 5px 25px #858c9c;
+    padding: 40px;
+    z-index: 10;
+
+    h3 {
+        text-align: center;
+        font-size: 26px;
+    }
+    .tutorial-body {
+        font-weight: bold;
+        line-height: 1.6em;
+    }
+    .tutorial-exit {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+}
+
+.wrapper {
+    border-radius: 40px;
+    
+  }
+  .title {
+    text-align: center;
+    color: #22304a;
+    text-shadow: 1px 1px 2px #b7c1cd;
+  }
+  .heading {
+    font-family: 'Archivo Black', sans-serif;
+    text-shadow: 2px 2px 2px rgba(20,20,20,0.3);
+  }
+  .interaction-placeholder {
+    min-width: 640px;
+    min-height: 480px;
+  }
+  .red {
+      color: $modRed;
+  }
+  .blue {
+      color: $modBlue;
+  }
+  .hidden {
+      display: none;
+  }

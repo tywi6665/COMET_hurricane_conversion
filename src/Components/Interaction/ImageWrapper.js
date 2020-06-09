@@ -17,11 +17,14 @@ const ImageWrapper = ({ dragItems, setDragItems, children, img_src, _id }) => {
         <div
             className="image_wrapper"
         // ref={drop}
-        >
+        >   
+            {/*<div className="interaction-placeholder">
+                DROPPABLES HERE
+            </div>*/}
             <img
                 className="interaction_img"
                 src="./graphics/sample.jpg"
-                title="Aim-a-cane" />
+            title="Aim-a-cane" />
             {/* {children} */}
             <Target
                 _id="high_1"
